@@ -4,23 +4,16 @@
 
 
  <!-- 用户登录时检查用户是否存在 ,两种方法-->
- <!-- 配置映射的用户信息 -->  
-         <!-- id：指定查询列中的唯 一标识，用户信息的中的唯 一标识，如果有多个列组成唯一标识，配置多个id  
+ <!-- 配置映射的用户信息--> 
+ <!-- id：指定查询列中的唯 一标识，用户信息的中的唯 一标识，如果有多个列组成唯一标识，配置多个id  
             column：用户信息的唯 一标识 列  
             property：用户信息的唯 一标识 列所映射到Orders中哪个属性  
           -->  
-  <!--  <resultMap type="com.beijiao.model.User" id="RgetUser">
-        <id column="userId" property="userId" />
-		<result property="username" column="userId" />
-		<result property="password" column="password" />
-   </resultMap>
-  <select id="checkUser" parameterType="java.util.Map" resultType="RgetUser">
-     select * from user where username=#{username} and password=#{password}
-  </select> -->
-  
+
   <select id="checkUser" parameterType="java.util.Map" resultType="com.beijiao.model.User">
-     select * from user where username=#{username1} and password=#{password}
+     select * from user where username=#{username} and password=#{password}
   </select>
+  
   
   <insert id="userResigster" parameterType="com.beijiao.model.User" >
   insert into user(username,password) values(#{username},#{password})
@@ -34,7 +27,16 @@
   update user password=#{password},oldPassword=#{oldPassword} where userId=#{userId}
   </update>
   
-  
+  <select id="getAllUser" resultMap="allUser">
+    select * from user
+  </select>
+   <resultMap type="com.beijiao.model.User" id="allUser">
+        <id column="userId" property="userId" />
+		<result property="username" column="username" />
+		<result property="password" column="password" />
+		<result property="oldPassword" column="oldPassword" />
+		<result property="pClassName" column="pClassName" />
+   </resultMap>
   
   <!-- <update id="updateMember" parameterType="com.beijiao.model.User">
         update Member

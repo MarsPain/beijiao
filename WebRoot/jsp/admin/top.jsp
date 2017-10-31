@@ -18,8 +18,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
 	<!--    <link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script language="JavaScript" src="js/jquery.js"></script>
+	<link href="jsp/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" src="jsp/admin/js/jquery.js"></script>
 	<script type="text/javascript">
 	$(function(){	
 		//顶部导航切换
@@ -31,10 +31,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</script>
   </head>
   
-  <body style="background:url(images/topbg.gif) repeat-x;">
+  <body style="background:url(jsp/admin/images/topbg.gif) repeat-x;">
 
     <div class="topleft">
-    <a href="main.jsp" target="_parent"><img src="images/logo.png" title="系统首页" /></a>
+    <a href="jsp/admin/main.jsp" target="_parent"><img src="images/logo.png" title="系统首页" /></a>
     </div>
         
     <!-- <ul class="nav">
@@ -49,11 +49,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="topright">    
     <ul>
 		<li>
-		<span><img src="images/help.png" title="帮助"class="helpimg" /></span>
+		<span><img src="jsp/admin/images/help.png" title="帮助"class="helpimg" /></span>
 		<a href="#">帮助</a>
 		</li>
 		<li><a href="#">关于</a></li>
-		<li><a href="login.jsp" target="_parent">退出</a></li>
+		<li><a href="jsp/admin/login.jsp" target="_parent">退出</a></li>
 	</ul>
      
     <div class="user">

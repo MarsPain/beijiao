@@ -5,6 +5,7 @@ package com.beijiao.dao;
 
 
 
+import java.util.List;
 import java.util.Map;
 
 import com.beijiao.model.User;
@@ -28,5 +29,8 @@ public interface UserMapper {
 	 */
    public String selectPawd(int userId);
    public int changepswd(int userId,String password,String oldPassword);
+   
+   //获取所有的用户
+   public List<User> getAllUser();
 
 }

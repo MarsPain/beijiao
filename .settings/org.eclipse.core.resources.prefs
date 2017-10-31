@@ -1,3 +1,7 @@
 eclipse.preferences.version=1
 encoding//WebRoot/jsp/test.jsp=UTF-8
+encoding//src/com/beijiao/controller/LoginController.java=UTF-8
+encoding//src/com/beijiao/controller/PolInterpreController.java=UTF-8
+encoding//src/jdbc.properties=UTF-8
+encoding//src/log4j.properties=UTF-8
 encoding/<project>=UTF-8

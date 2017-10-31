@@ -21,12 +21,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link href="css/select.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
-	<script type="text/javascript" src="js/select-ui.min.js"></script>
-	<script type="text/javascript" src="editor/kindeditor.js"></script>
+    <link href="jsp/admin/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="jsp/admin/css/select.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="jsp/admin/js/jquery.js"></script>
+	<script type="text/javascript" src="jsp/admin/js/jquery.idTabs.min.js"></script>
+	<script type="text/javascript" src="jsp/admin/js/select-ui.min.js"></script>
+	<script type="text/javascript" src="jsp/admin/editor/kindeditor.js"></script>
 	
 	<script type="text/javascript">
 	    KE.show({

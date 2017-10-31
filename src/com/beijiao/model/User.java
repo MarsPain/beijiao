@@ -12,6 +12,7 @@ public class User {
 	//ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
 	private String password;
 	private String oldPassword;
+	//ÐÐÒµÃû
 	private String pClassName;
 	
 	

@@ -100,9 +100,8 @@ public class LoginController {
 	
 	@RequestMapping("test")
 	public String test(){
-		List<Policy> areas=policyService.selectPolicyArea("朝阳区");
-		System.out.println(areas.get(6).getPolTime());
-	    return "";
+	
+	    return "admin/main";
 	}
 
 	
@@ -182,6 +181,18 @@ public class LoginController {
 		}
         
 	}
+	
+	
+	/*
+	 * 获取所有的用户表
+	 */
+	@RequestMapping("getAllUser")
+	public String getAllUser(Model model){
+		List<User> users=userService.getAllUser();
+		model.addAttribute("users", users);
+		return "admin/user";
+	}
+	
 	
 	public static void main(String[] args){
 		LoginController policy=new LoginController();
