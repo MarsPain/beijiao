@@ -121,18 +121,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       <div class="file">
 		<ul>
-		<c:forEach items="${policys}" var="policys">
+		<c:forEach items="${files}" var="files">
 	  	   <li>
 			 <img src="images/dian.png" width="5px" height="5px" alt="" />
-			 <a href="policy/toPolicy?policyId=${policys.policyId}" title="">${policys.polTitle}</a>
-			 <span id="time">[${policys.polTime}]</span>
+			 <a href="file/tofile?fileId=${files.fileId}" title="">${files.filename}</a>
+			 <span id="time">[${files.filetime}]</span>
 		  </li>
 	  	</c:forEach>
-	  	   <li>
-		    <img src="images/dian.png" width="5px" height="5px"alt="" />
-		    <a href="" title="">发布文件1 办好热线事，搭起民心桥——国务院第四次大督查热线督查综述</a>
-		    <span id="time">[2017-10-09]</span>
-		  </li> 
+	
 		  
 		</ul>
 	 </div>
@@ -147,59 +143,59 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <ul class="paginList">
         <c:choose>
 	      <c:when test="${page.pageNow - 1 > 0}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow-1}"><span class="pagepre"></span></a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=${page.pageNow-1}"><span class="pagepre"></span></a></li>
 	      </c:when>
 	      <c:when test="${page.pageNow - 1 <= 0}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow}"></a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=${page.pageNow}"></a></li>
 	      </c:when>
 	     </c:choose>
         
-        <li class="paginItem current"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=1">1</a></li>
+        <li class="paginItem current"><a href="file/getAllfile?pageNow=1">1</a></li>
         
         <c:choose>
 	      <c:when test="${page.pageTotalCount < 2}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=1">2</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=1">2</a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=2">2</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=2">2</a></li>
 	      </c:otherwise>
 	     </c:choose>
         
         <c:choose>
 	      <c:when test="${page.pageTotalCount<3}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=1">3</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=1">3</a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=3">3</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=3">3</a></li>
 	      </c:otherwise>
 	     </c:choose>
         <c:choose>
 	      <c:when test="${page.pageTotalCount<4}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=1">4</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=1">4</a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=4">4</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=4">4</a></li>
 	      </c:otherwise>
 	     </c:choose>
         <li class="paginItem more"><a href="javascript:;">...</a></li>
         <c:choose>
 	      <c:when test="${page.pageTotalCount<10}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=1">10</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=1">10</a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=10">10</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=10">10</a></li>
 	      </c:otherwise>
 	     </c:choose>
         
         <c:choose>           
 	     <c:when test="${page.pageTotalCount==0}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=${page.pageNow}"><span class="pagenxt"></span></a></li>
 	     </c:when>
 	     <c:when test="${page.pageNow+1<page.pageTotalCount}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow+1}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=${page.pageNow+1}"><span class="pagenxt"></span></a></li>
 	     </c:when>
 	     <c:when test="${page.pageNow+1>=page.pageTotalCount}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageTotalCount}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=${page.pageTotalCount}"><span class="pagenxt"></span></a></li>
 	     </c:when>
 	    </c:choose>
         
@@ -207,10 +203,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         
         <c:choose>
 	      <c:when test="${page.pageTotalCount==0}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow}"><span class="pagenxt">尾页</span></a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=${page.pageNow}"><span class="pagenxt">尾页</span></a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageTotalCount}">尾页</a></li>
+	      <li class="paginItem"><a href="file/getAllfile?pageNow=${page.pageTotalCount}">尾页</a></li>
 	      </c:otherwise>
 	     </c:choose>
         
