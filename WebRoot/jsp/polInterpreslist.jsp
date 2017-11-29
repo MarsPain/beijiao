@@ -21,8 +21,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-    <link href="css/module_style2.css" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="js/banner1.js"></script>
+   <!--  <link href="css/module_style2.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/banner1.js"></script> -->
+    <link href="css/module_style.css" type="text/css" rel="stylesheet" />
   </head>
   
 <body>

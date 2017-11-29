@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.beijiao.model.Discuss;
 import com.beijiao.model.Notice;
 import com.beijiao.service.NoticeService;
 
@@ -33,6 +34,13 @@ public class NoticeController {
 		List<Notice> notices=noticeService.selectListNotice();
 		model.addAttribute("notices", notices);
 		return "";
+	}
+	
+	@RequestMapping("getallnotice")
+	public String getListNotice(Model model){
+		List<Notice> notices=noticeService.selectListNotice();
+		model.addAttribute("notices", notices);
+		return "Noticelist";
 	}
 	
 	@RequestMapping("addNotice")

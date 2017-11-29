@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
     <link href="css/content.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="js/banner1.js"></script>
+   
   </head>
   
   <body>

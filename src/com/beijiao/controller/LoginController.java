@@ -30,6 +30,7 @@ import com.beijiao.model.User;
 import com.beijiao.service.DiscussService;
 import com.beijiao.service.FileService;
 import com.beijiao.service.NewsService;
+import com.beijiao.service.NoticeService;
 import com.beijiao.service.PClassService;
 import com.beijiao.service.PicPolicyService;
 import com.beijiao.service.PolInterpreService;
@@ -62,6 +63,7 @@ public class LoginController {
 	private PClassService pclassService;
 	@Resource
 	private FileService fileService;
+	
 	/*
 	 * test
 	 */
