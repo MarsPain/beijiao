@@ -24,7 +24,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link href="css/module_style.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="js/banner1.js"></script>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-  </head>
+    
+
+</head>
   
 <body>
 	<div class="top">
@@ -141,59 +143,59 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <ul class="paginList">
         <c:choose>
 	      <c:when test="${page.pageNow - 1 > 0}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow-1}"><span class="pagepre"></span></a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow-1}"><span class="pagepre" id="pre">《</span></a></li>
 	      </c:when>
 	      <c:when test="${page.pageNow - 1 <= 0}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow}"></a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow}">《</a></li>
 	      </c:when>
 	     </c:choose>
         
-        <li class="paginItem current"><a href="polInterpre/tolistPolInterpre?pageNow=1">1</a></li>
+        <li class="paginItem "><a href="polInterpre/tolistPolInterpre?pageNow=1"><span class="pagenxt " id="1">1</span></a></li>
         
         <c:choose>
 	      <c:when test="${page.pageTotalCount < 2}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=1">2</a></li>
+	      <li class="paginItem "><a href="polInterpre/tolistPolInterpre?pageNow=1"><span class="pagenxt" id="2">2</span></a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=2">2</a></li>
+	      <li class="paginItem "><a href="polInterpre/tolistPolInterpre?pageNow=2"><span class="pagenxt" id="2">2</span></a></li>
 	      </c:otherwise>
 	     </c:choose>
         
         <c:choose>
 	      <c:when test="${page.pageTotalCount<3}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=1">3</a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=1"><span class="pagenxt" id="3">3</span></a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=3">3</a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=3"><span class="pagenxt" id="3">3</span></a></li>
 	      </c:otherwise>
 	     </c:choose>
         <c:choose>
 	      <c:when test="${page.pageTotalCount<4}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=1">4</a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=1"><span class="pagenxt" id="4">4</span></a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=4">4</a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=4"><span class="pagenxt" id="4">4</span></a></li>
 	      </c:otherwise>
 	     </c:choose>
-        <li class="paginItem more"><a href="javascript:;">...</a></li>
+        <li class="paginItem more"><a href="javascript:;"><span class="pagenxt" id="dian">...</span></a></li>
         <c:choose>
 	      <c:when test="${page.pageTotalCount<10}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=1">10</a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=1"><span class="pagenxt" id="10">10</span></a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=10">10</a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=10"><span class="pagenxt" id="10">10</span></a></li>
 	      </c:otherwise>
 	     </c:choose>
         
         <c:choose>           
 	     <c:when test="${page.pageTotalCount==0}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow}"><span class="pagenxt" id="next">》</span></a></li>
 	     </c:when>
 	     <c:when test="${page.pageNow+1<page.pageTotalCount}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow+1}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow+1}"><span class="pagenxt" id="next">》</span></a></li>
 	     </c:when>
 	     <c:when test="${page.pageNow+1>=page.pageTotalCount}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageTotalCount}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageTotalCount}"><span class="pagenxt" id="next">》</span></a></li>
 	     </c:when>
 	    </c:choose>
         
@@ -201,15 +203,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         
         <c:choose>
 	      <c:when test="${page.pageTotalCount==0}">
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow}"><span class="pagenxt">尾页</span></a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageNow}"><span class="pagenxt" id="count">尾页</span></a></li>
 	      </c:when>
 	      <c:otherwise>
-	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageTotalCount}">尾页</a></li>
+	      <li class="paginItem"><a href="polInterpre/tolistPolInterpre?pageNow=${page.pageTotalCount}"><span class="pagenxt" id="count">尾页</span></a></li>
 	      </c:otherwise>
 	     </c:choose>
         
         </ul>
-    </div>
+
+				<script type="text/javascript">				
+					 /*  $(".paginItem > a").click(function() {						
+						 $(".paginItem").removeClass("current");						
+						  $(this).parent().addClass("current"); 
+						    return false;	 				
+					 })   */ 
+					 $(document).ready(function(){
+					 if(${page.pageNow}==1)
+					 {$("#1").addClass("selected");}
+					 if(${page.pageNow}==2)
+					 {$("#2").addClass("selected");}
+					 if(${page.pageNow}==3)
+					 {$("#3").addClass("selected");}
+					 if(${page.pageNow}==4)
+					 {$("#4").addClass("selected");}
+					 if(4<${page.pageNow}&&${page.pageNow}<10)
+					 {$("#dian").addClass("selected");}
+					 if(${page.pageNow}==10)
+					 {$("#10").addClass("selected");}
+					 if(${page.pageNow}==${page.pageTotalCount})
+					 {$("#count").addClass("selected");}					  					 
+					 });					
+				</script>
+		</div>
     
     
     

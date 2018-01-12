@@ -157,7 +157,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 				<script type="text/javascript">
 					$("#subnav_title2 .subnav_item").click(function(){
-						$("#subnav_title1 .subnav_item").css("color","black");
+						$("#subnav_title2 .subnav_item").css("color","black");
 						$(this).css("color","#de3237");
 					})
 				</script>
@@ -173,7 +173,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 				<script type="text/javascript">
 					$("#subnav_title3 .subnav_item").click(function(){
-						$("#subnav_title1 .subnav_item").css("color","black");
+						$("#subnav_title3 .subnav_item").css("color","black");
 						$(this).css("color","#de3237");
 					})
 				</script>
@@ -203,10 +203,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <ul class="paginList">
         <c:choose>
 	      <c:when test="${page.pageNow - 1 > 0}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow-1}"><span class="pagepre"></span></a></li>
+	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow-1}"><span class="pagepre"></span>《</a></li>
 	      </c:when>
 	      <c:when test="${page.pageNow - 1 <= 0}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow}"></a></li>
+	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow}">《</a></li>
 	      </c:when>
 	     </c:choose>
         
@@ -249,13 +249,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         
         <c:choose>           
 	     <c:when test="${page.pageTotalCount==0}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow}"><span class="pagenxt"></span>》</a></li>
 	     </c:when>
 	     <c:when test="${page.pageNow+1<page.pageTotalCount}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow+1}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageNow+1}"><span class="pagenxt"></span>》</a></li>
 	     </c:when>
 	     <c:when test="${page.pageNow+1>=page.pageTotalCount}">
-	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageTotalCount}"><span class="pagenxt"></span></a></li>
+	      <li class="paginItem"><a href="policy/toIndustryPolicy?pClassName=${hint.pClassName}&pageNow=${page.pageTotalCount}"><span class="pagenxt"></span>》</a></li>
 	     </c:when>
 	    </c:choose>
         
